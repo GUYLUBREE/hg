@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rest Api - Kahfz-Xy</title>
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/owl-carousel-2/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Wk6KnE7aJHUHjpp_wBoDfkeSIOQfSGMmxg&usqp=CAU"><link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Wk6KnE7aJHUHjpp_wBoDfkeSIOQfSGMmxg&usqp=CAU"><link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+    <script src="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+    <meta property="og:title" content="Fxc7 Rest Api"/>  
+    <meta name="description" content=" Free Rest Api ">
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Wk6KnE7aJHUHjpp_wBoDfkeSIOQfSGMmxg&usqp=CAU">
+  </head>
+  <body>
+  <body id="page-top" onload="getvisitor();">
+    <div class="container-scroller">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+          <a class="sidebar-brand brand-logo rounded-circle" href="#"><img src="images/logo1.png" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="#"><img src="images/logo1.png" class="rounded-circle" alt="logo" /></a>
+        </div>
+       <font face="Original Surfer">
+        <ul class="nav">
+          <li class="nav-item profile">
+            <div class="profile-desc">
+              <div class="profile-pic">
+                <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="https://i.ibb.co/7pmfhHN/IMG-20210526-WA0030.jpg" alt="">
+                  <span class="count bg-success"></span>
+                </div>
+                <div class="profile-name">
+                  <h5 class="mb-0 font-weight-normal">Kahfz ( Kahfi )</h5>
+                  <span>Kelas 8, Bandung</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item nav-category">
+            <span class="nav-link">Kahfz-Xy - APIs</span>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" href="/docs">
+          <span class="menu-icon">
+          <i class="mdi mdi-home"></i>
+          </span>
+          <span class="menu-title">All Features</span>
+          </a>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-islamic" aria-expanded="false" aria-controls="ui-islamic">
+          <span class="menu-icon">
+          <i class="mdi mdi-star"></i>
+          </span>
+          <span class="menu-title">Islamic API</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-islamic">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/api/muslim/asmaulhusna?apikey=APIKEY">Asmaul Husna</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/muslim/surah?apikey=APIKEY&no=10">Surah Number</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/muslim/hadits?kitab=bukhari&nomor=52&apikey=APIKEY">Hadist Sahih</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/muslim/quran?surah=1&ayat=2&apikey=APIKEY">Al-Qur'an Surah</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/muslim/kisahnabi?nabi=muhammad&apikey=APIKEY">Kisah Nabi</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/muslim/jadwalshalat?query=banyuwangi&apikey=APIKEY">Jadwal Sholat</a></li>
+          </ul>
+          </div>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-stalker" aria-expanded="false" aria-controls="ui-stalker">
+          <span class="menu-icon">
+          <i class="mdi mdi-chart-bar"></i>
+          </span>
+        <span class="menu-title">Searching API</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-search">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/api/search/sticker?apikey=APIKEY&query=pentol">Sticker Search</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/search/tiktok?apikey=APIKEY&query=chikaku">Search Tiktok Hastag</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/search/brainly?apikey=APIKEY&query=sejarah indonesia">Brainly Search</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/search/google_play?apikey=APIKEY&query=WhatsApp">Google Play</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/search/image?apikey=APIKEY&query=WhatsApp">Google Image</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/search/image2?apikey=APIKEY&query=chikaku">Google Image 2</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/search/pinterest?apikey=APIKEY&query=mountain">Search Pinterest</a></li>
+          </ul>
+          </div>
+          </li><!--
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-apikey" aria-expanded="false" aria-controls="ui-apikey">
+              <span class="menu-icon">
+                <i class="mdi mdi-key-variant"></i>
+              </span>
+              <span class="menu-title">Apikey</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-apikey">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a href="https://wa.me/628311800241?text=beli+apikey+10k+bang" class="nav-link">10k/Month + costum</a> </li>
+              <hr>
+                <li class="nav-item"> <a href="/api/cekkey?apikey=Your Apikey" class="nav-link">Cek Apikey</a></li>
+              </ul>
+            </div>
+          </li>--><br>
+          <div class="row col align-item-center ml-5 md-7 mb-3">
+            <small class="text-center font-weight-bold text-uppercase">Made With ❤️ Kahfz-Xy</small>
+          </div>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://github.com/K4HFZ">
+              <span class="menu-icon">
+                <i class="mdi mdi-github-circle"></i>
+              </span>
+              <span class="menu-title">Github</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://wa.me/62878289304418">
+              <span class="menu-icon">
+                <i class="mdi mdi-whatsapp"></i>
+              </span>
+              <span class="menu-title">WhatsApp</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://youtube.com/c/KahfzXzyy">
+              <span class="menu-icon">
+                <i class="mdi mdi-facebook"></i>
+              </span>
+              <span class="menu-title">Youtube</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://wee.instagram.com/Kahfz_13">
+              <span class="menu-icon">
+                <i class="mdi mdi-instagram"></i>
+              </span>
+              <span class="menu-title">Instagram</span>
+            </a>
+          </li>
+        </ul>
+       </font>
+      </nav>
+      <div class="container-fluid page-body-wrapper">
+        <nav class="navbar p-0 fixed-top d-flex flex-row">
+          <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo-mini" href="index.html"><big><i class="mdi mdi-biohazard text-primary"></i></big></a>
+          </div>
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+              <span class="mdi mdi-menu"></span>
+            </button>
+            <ul class="navbar-nav w-100">
+              <li class="nav-item w-100">
+                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                  <input type="text" class="form-control" placeholder="Kahfz-Xy APIs">
+                </form>
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item nav-settings d-none d-lg-block">
+                <a class="nav-link" href="#">
+                  <i class="mdi mdi-view-grid"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown border-left">
+                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                  <i class="mdi mdi-bell"></i>
+                  <span class="count bg-danger"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                  <h6 class="p-3 mb-0">Info New Update</h6>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-calendar text-success"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Change Template</p>
+                      <p class="text-muted ellipsis mb-0"> Cuman Ganti Template Bang:v </p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-wrench text-danger"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">+ Fitur Dikit</p>
+                      <p class="text-muted ellipsis mb-0"> Kurang Fitur Karna Biar Tidak Ada Ke ribet an </p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-wrench text-danger"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">+ Informasi Terupdate Corona Indonesia</p>
+                      <p class="text-muted ellipsis mb-0"> Menampilkan Statistic Covid19</p>
+                    </div>
+                  </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                  <div class="navbar-profile">
+                    <img class="img-xs rounded-circle" src="https://i.ibb.co/YP05qnL/IMG-20210523-WA0099.jpg" alt="">
+                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Ahmad Farhan</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+          </div>
+        </nav>
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-danger text-uppercase">IP Address</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0" id="ip">Waiting...</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success">
+                          <span class="mdi mdi-access-point-network icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Your IP Address</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="font-weight-bold text-info text-uppercase">Your Battery</h6>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                        	<span id="batteryLevel"></span>
+                          <h3 class="mb-0" id="percentageLevel">Waiting...</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-battery-positive"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Percentase Your Battery</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-success text-uppercase">Visitor</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0" id="visits">Waiting...</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-eye icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Visit Web</font>
+                  </div>
+                </div>
+              </div>
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-info text-uppercase">Date</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h4 class="mb-0" id="tanggal">Waiting...</h4>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-calendar icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Date Now</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-success text-uppercase">Clock</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h4 class="mb-0" id="Clock">Waiting...</h4>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-clock icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal" id="Ucapan">Ucapan</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="font-weight-bold text-info text-uppercase">Road To Idul Adha</h6>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h5 class="mb-0" id="IdulAdha">Waiting...</h5>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-star icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Menuju Idul Adha</font>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form action="/api/cekapikey?apikey=">
+              <div class="card card-round mt-5 stretch-card grid-margin">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h4 class="m-0 font-weight-bold text-warning"><i class="mdi mdi-key"></i>  &nbsp; Apikey Cek!</h4>
+                </div>
+               <div class="card-body">
+                 <p class="status" style="font-size: 17px;"></p>
+                   <div class="form-group">
+                     <input class="form-control font-weight-bold text-center" type="text" placeholder="Masukkan Apikey" name="apikey" required>
+                   </div>
+                   <div class="form-group"><center>
+                     <button type="submit" class="btn btn-primary content-justify-center"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> <span class="font-weight-bold"> Submit</span></button></center>
+                   </div>
+               </div>
+             </div>
+            </form>
+<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-5404310597803049" data-ad-slot="6657550061"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            <div class="row">
+              <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="mt-3 btn btn-outline-danger bg-transparent">
+                    <div id="demo" class="alert btn btn-outline-danger" role="alert">
+                      <span id="Statistic">Waiting...</span>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+              <div class="card">
+              <div class="card-body">
+              </div>
+              <canter><h4 class="card-title">FITUR LAINNYA</h4>
+              <div class="template-demo">
+              <button type="button" id="sbs" class="btn btn-dark btn-lg btn-block" onclick="githubstalk()">GITHUB STALK</button>
+              <button type="button" id="sbs" class="btn btn-dark btn-lg btn-block" onclick="jadwal()">JADWAL SHOLAT</button>
+              <button type="button" id="sbs" class="btn btn-dark btn-lg btn-block" onclick="hilihgen()">HILIH GENERATOR</button>
+              </div>
+              </div>
+              </div>
+              <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                      <h6 class="text-center font-weight-bold">Kahfz-Xy Rest APIs</h6><hr color="blue">
+                     <div class="row content-justify-center">
+                       <img width="150px" height="150px" class="rounded-circle img-thumbnail" id="image" src="" alt="sad:)"><hr>
+                         <div class="col">
+                      <font size="2" face="Original Surfer" class="col mt-3 text-center text-uppercase font-weight-bold">&nbsp; &nbsp; &nbsp; &nbsp;Thanks To:<br>• Zahirr<br>• Manurios<br>• Wawan<br>• Rakha<br>• Fxc7 Team<br>Kahfz-Xy ( pengguna Sc Rest Api Ini )<br> <font color="blue">Ini Tulisan Warna Biru</font></font>
+                         </div>
+                     </div><hr>
+                     <font class="font-weight-bold" face="Original Surfer">
+                     <small class="text-center">• Jika Menemukan Bug/Typo Harap Segera Lapor <a href="https://wa.me/62878289304418">Disini</a></small><br>
+                     <small class="text-center">• Semua Fitur Free Gan</small><br>
+                     <small class="text-center">• Maaf Bang Pemula Masih Belajar:)</small>
+                     <small class="text-center"><br>• Apikey: <b>Fxc7</b></small>
+                     <small class="text-center"><br>• Costum Apikey?? <a href="https://wa.me/62878289304418?text=bang+mau+costum+apikey+berapa?">Klik Disini</a></small>
+                     </font>
+                  </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <div class="bg-dark btn btn-block btn-outline-danger">
+                <font face="Original Surfer" class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © <span id="Years">00</span> Kahfz-Xzy</font>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      swal({
+        title: 'Welcome To Rest Api Broo',
+        text: 'Maaf klo bnyak yg error:)',
+        imageUrl: 'https://telegra.ph/file/28cdc49b2bbd2d069cf3b.png',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'I am Fine:)',
+        animation: true
+      })
+    </script>
+			<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>   
+    <script async src="hit/api-fxc7.herokuapp.com/visits_callback_cb.js"></script>
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/ojan.js"></script>
+  <center><font size="2">This is the free demo result. For a full version of this website, please go to  <a href="https://www6.waybackmachinedownloader.com/website-downloader-online/scrape-all-files/">Website Downloader</a></font></center></body>
+</html>
